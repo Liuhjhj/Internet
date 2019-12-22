@@ -1,0 +1,8 @@
+#include "sendthread.h"
+
+void sendThread::run()
+{
+    for(int i = 0 ; i < 5 ; i++){
+        send(sockConn[i], recvBuf, strlen(recvBuf) + 1, 0);
+    }
+}
